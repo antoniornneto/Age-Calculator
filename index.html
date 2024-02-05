@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tempo de vida</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <main class="card">
+
+    <form class="container">
+      <div class="form_container">
+        <div id="input_container">
+          <label class="" id="label-day" for="day">Day</label>
+          <input type="number" name="day" id="day" placeholder="DD">
+          <small id="small_day"></small>
+        </div>
+        <div id="input_container">
+          <label class="" id="label-month" for="month">Month</label>
+          <input type="number" name="month" id="month" placeholder="MM" class="">
+          <small id="small_month"></small>
+        </div>
+        <div id="input_container">
+          <label class="" id="label-year" for="year">Year</label>
+          <input type="number" name="years" id="year" placeholder="AAAA" class="">
+          <small id="small_year"></small>
+        </div>
+      </div>
+      <div class="container_btn">
+        <hr>
+        <button type="submit" id="sbt_btn"><img src="./assets/images/icon-arrow.svg" alt=""></button>
+      </div>
+    </form>
+
+
+    <div class="display">
+      <h1 class="yy"><span id="years">- -</span> years</h1>
+      <h1 class="mm"><span id="months">- -</span> months</h1>
+      <h1 class="dd"><span id="days">- -</span> days</h1>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
