@@ -18,9 +18,10 @@ let months = document.querySelector("#months");
 let years = document.querySelector("#years");
 
 const date = new Date();
+const actualYear = date.getFullYear();
+console.log(actualYear);
 
 inputDay.addEventListener("input", () => {
-  
   let dia = inputDay.value;
   if (dia.length == 0) {
     labelDay.classList.remove("error-txt");
@@ -175,8 +176,14 @@ function calcular(dia, mes, ano) {
 
 btnSbt.addEventListener("click", (e) => {
   e.preventDefault();
+
   let day = +inputDay.value;
   let month = +inputMonth.value;
   let year = +inputYear.value;
-  calcular(day, month, year);
+
+  if (day > 31 || month > 12 || year > actualYear) {
+    alert("Insira uma data válida!");
+  } else {
+    calcular(day, month, year);
+  }
 });
